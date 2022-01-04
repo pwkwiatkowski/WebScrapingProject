@@ -12,7 +12,7 @@ async function saveToFile() {
   for (let i = 0; i < carData.length; i++) {
     fs.readFile("cars_in_json.txt", function (err, data) {
         let json = carData[i];
-        var dataToFile = JSON.stringify(json) + ",";
+        var dataToFile = JSON.stringify(json) + "\n";
       fs.appendFile("cars_in_json.txt", dataToFile, function (err) {
         if (err) throw err;
         console.log('The "data to append" was appended to file!');
